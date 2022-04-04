@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* !문서의 크기를 정해주지 않아도 자식 요소에 의해 결정될 수 있음 */
+    /* 컨테이너는 종종 자식의 크기를 따라갈 때도 있다, 데이터가 없는 것에 한해서 */
+    /* 컨테이너에 값이 없으면 안됨 */
+    #root{
+      border: 1px solid red;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      /* !대신 세로축은 기준점이 없으므로 정해질 수 없음 */
+      align-items: center;
+    }
+    #root>div{
+      /* width: 100px; */
+      /* flex-grow: 자라나다
+      1:1:1로
+      => 매번 크기 지정해줄 필요가 없다, 자식 요소에 부여해야함 */
+      flex-grow: 1;
+      height: 100px;
+      background-color: #c4c4c4;
+    }
+    #root>div:nth-child(3){
+      /* 비율
+      => width 값 대신할 수 있음*/
+      /* 한 가지 값만 비율 변경 가능 */
+      flex-grow: 3;
+      background-color: red;
+      /* display: flex;는 컨테이너용 속성이 있다+아이템용 속성도 !따로 있음!
+      => item flex 속성
+      1. flex-grow
+      2. flex-shrink: grow와 반대로 사용하면 됨
+      3. flex-basic */
+      /* 값을 몰라도 디자인이 가능해짐 = 디자이너 피로도 감소 */
+      /* 모든 데이터를 일일이 작성해주긴 어려우므로 브라우저에게 일임하는 것
+      => 대표적으로 비율을 지정 */
+      /* https://www.w3schools.com/cssref/default.asp */
+      /* => API document를 확인해가며 작업하는 방식 = 오픈북처럼 띄워놓고 하는 방식, 문서를 봐가면서 작업하기, 빠른 업데이트로 어차피 새로 올라오는 기능이 많음
+      => 사용법: 몰라도 써먹을 수 있게 됨 */
+      /* *모르거나 필요한 막히는 부분은 기능 살펴보고 적용해보자 */
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+</body>
+</html>
