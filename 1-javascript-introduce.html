@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hello</h1>
+  <!-- js -->
+  <!-- 제어는 inline 방식으로 입력이 됨 -->
+  <!-- 기계가 제어해준 것 -->
+  <!-- 정적인(static) 문서는 모두 마크업을 했어야 했음 -->
+  <!-- 동적인(dynamic) 문서: 기계가 대신 써준 것
+    = 기계가 해석한다, 브라우저가 해석한다, 자바스크립트 엔진이 해석한다 = html 문서를 자바스크립트가 xml로 해석했다
+    = css 스타일을 자바스크립트가 스타일링해줬다
+    => parse(=엔진)/rendering(=출력하는 과정)
+    = 언젠간 css를 안 쓰게 됨, js로 제어를 더 깔끔하게 하기 위해서
+    브라우저가 일을 한 것 -> 제어까지 동시에 한 것 -->
+  <script>
+    // 태그를 스타일 시트 변수처럼 담아둔 것
+    var h1 = document.querySelector('h1');
+    // 프로그래밍 방식
+    h1.style.color = 'red';
+  </script>
+</body>
+</html>
